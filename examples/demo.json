@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "title": "Your next idea",
+  "width": 1280,
+  "height": 720,
+  "fps": 30,
+  "bpm": 120,
+  "seed": 271828,
+  "palette": {
+    "background": "#181A20",
+    "foreground": "#F3F0E7",
+    "accent": "#FF735C",
+    "secondary": "#BEB0F4"
+  },
+  "scenes": [
+    {
+      "type": "punch",
+      "beats": 6,
+      "text": ["YOUR NEXT", "IDEA"],
+      "eyebrow": "A little thought. A big entrance.",
+      "caption": "Give it room to move."
+    },
+    {
+      "type": "stack",
+      "beats": 6,
+      "text": ["MAKE", "SOME", "NOISE"],
+      "eyebrow": "Find your rhythm",
+      "caption": "Start with something worth saying."
+    },
+    {
+      "type": "elastic",
+      "beats": 8,
+      "text": ["THINK", "BIGGER"],
+      "eyebrow": "Stretch the possibilities",
+      "caption": "Let your words take up space."
+    },
+    {
+      "type": "orbit",
+      "beats": 8,
+      "text": ["SHIFT YOUR", "PERSPECTIVE"],
+      "eyebrow": "Look at it from another angle",
+      "caption": "A fresh view changes everything."
+    },
+    {
+      "type": "steps",
+      "beats": 6,
+      "text": ["BUILD", "MOVE", "REPEAT"],
+      "eyebrow": "Keep the momentum",
+      "caption": "Make something. Make it move."
+    },
+    {
+      "type": "end",
+      "beats": 6,
+      "text": ["MAKE IT", "YOURS."],
+      "eyebrow": "Your words. Your colours. Your film.",
+      "caption": "The next idea starts with you."
+    }
+  ]
+}

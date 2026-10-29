@@ -1,0 +1,13 @@
+node_modules/
+output/
+films/
+.cache/
+.env
+.env.*
+*.secrets.json
+*token*.json
+*.log
+.DS_Store
+Thumbs.db
+*.mp4
+*.wav

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="colour-scheme" content="dark">
+  <title>Kinetic Film | Local preview</title>
+  <style>
+    :root{color-scheme:dark;--bg:#121318;--panel:#1c1e24;--line:#34363d;--text:#f3f0e7;--muted:#b0b0b6;--accent:#ff735c}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;min-height:100vh}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #beb0f4;outline-offset:5px}button:disabled{opacity:.4;cursor:default}
+    .shell{max-width:1440px;margin:0 auto;padding:25px 36px 22px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:24px}.wordmark{font-size:17px;letter-spacing:-.7px;font-weight:900;display:flex;align-items:center;gap:11px}.mark{width:23px;height:23px;background:var(--accent);clip-path:polygon(40% 0,60% 0,60% 35%,100% 20%,100% 42%,67% 50%,100% 65%,100% 87%,60% 65%,60% 100%,40% 100%,40% 65%,0 87%,0 65%,33% 50%,0 42%,0 20%,40% 35%)}.mode{color:var(--muted);font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase}.mode:before{content:"";display:inline-block;background:#9ad09c;width:6px;height:6px;border-radius:50%;margin-right:9px;vertical-align:middle}
+    .workspace{display:grid;grid-template-columns:minmax(0,1fr);gap:0}.stage{background:#0c0d10;display:flex;align-items:center;justify-content:center;padding:16px;min-height:200px;border:1px solid var(--line)}canvas{display:block;max-width:100%;width:auto;height:auto;max-height:calc(100vh - 272px);aspect-ratio:16/9}.transport{display:flex;align-items:center;gap:20px;padding:19px 0;border-bottom:1px solid var(--line)}.play{border:1px solid var(--line);width:43px;height:43px;border-radius:50%;background:var(--panel);color:var(--text);display:grid;place-items:center;flex-shrink:0}.play:hover{background:#2c2f38;border-color:#777982}.play svg{width:17px;height:17px;fill:currentColor}.range{width:100%;accent-color:var(--accent);min-width:40px;cursor:pointer}.time{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;color:var(--muted);white-space:nowrap}.time strong{color:var(--text);font-weight:400}.metadata{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 0 18px}h1{font-size:21px;letter-spacing:-.5px;margin:0 0 8px;font-weight:700}.details{font-size:12px;color:var(--muted);line-height:1.6}.sound-label{font-size:11px;color:var(--muted);border:1px solid var(--line);padding:8px 11px;border-radius:4px;white-space:nowrap}.scene-list{display:flex;gap:7px;overflow:auto;padding:0 0 13px}.scene-button{background:transparent;border:1px solid var(--line);border-radius:4px;color:var(--muted);font-size:11px;letter-spacing:.2px;padding:9px 13px;white-space:nowrap}.scene-button:hover{border-color:#88898f;color:var(--text)}.scene-button[aria-current="true"]{color:var(--text);background:var(--panel);border-color:var(--accent)}.scene-number{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--accent);margin-right:7px}.foot{display:flex;justify-content:space-between;gap:16px;color:#888a93;font-size:10px;letter-spacing:.2px;padding-top:9px}.error{color:#ffad9e;white-space:pre-wrap;font-size:14px;line-height:1.6;padding:20px;display:none}kbd{font:inherit;border:1px solid var(--line);padding:2px 4px;border-radius:3px}.capture body{margin:0;overflow:hidden;background:transparent;min-height:0}.capture .shell{margin:0;padding:0;max-width:none}.capture .topbar,.capture .transport,.capture .metadata,.capture .scene-list,.capture .foot{display:none}.capture .workspace,.capture .stage{display:block;margin:0;padding:0;border:0;background:transparent;min-height:0}.capture canvas{max-width:none;max-height:none;width:auto;height:auto;aspect-ratio:auto}
+    @media(max-width:650px){.shell{padding:18px 16px}.topbar{margin-bottom:18px}.wordmark{font-size:15px}.mode{font-size:9px;letter-spacing:1px}.stage{padding:7px}canvas{max-height:calc(100dvh - 305px)}.transport{gap:12px;padding:15px 0}.time{font-size:10px}.metadata{padding:18px 0 14px;flex-wrap:wrap;gap:10px}h1{font-size:19px}.sound-label{font-size:10px;padding:6px 9px}.foot{flex-wrap:wrap;font-size:10px;gap:9px}.scene-button{padding:8px 10px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behaviour:auto}}
+  </style>
+  <script type="module" src="/preview.mjs"></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar"><div class="wordmark"><span class="mark" aria-hidden="true"></span>KINETIC FILM</div><div class="mode">Local studio</div></header>
+    <main class="workspace">
+      <div class="stage"><canvas aria-label="Animated typography film preview"></canvas></div>
+      <div class="error" id="error" role="alert"></div>
+      <div class="transport">
+        <button type="button" class="play" id="play" aria-label="Play preview" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4 L21 12 L7 20 Z"/></svg></button>
+        <input class="range" id="scrub" aria-label="Film position in seconds" type="range" min="0" max="20" step="0.001" value="0" disabled>
+        <output class="time"><strong id="current">00:00.0</strong> / <span id="duration">00:20.0</span></output>
+      </div>
+      <div class="metadata"><div><h1 id="title">Loading your film</h1><div class="details" id="details">Canvas typography, composed on your machine.</div></div><div class="sound-label">Silent preview / soundtrack included in export</div></div>
+      <nav class="scene-list" id="scenes" aria-label="Jump to scene"></nav>
+    </main>
+    <footer class="foot"><span>Independent edition / Made for your next idea</span><span><kbd>Space</kbd> play or pause &nbsp; <kbd>&larr;</kbd> <kbd>&rarr;</kbd> seek 1 second</span></footer>
+  </div>
+</body>
+</html>

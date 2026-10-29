@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Kinetic Film by Loudachris Digital Marketing</title>
+  <desc id="desc">Beat-timed typography. Original sound. Your next film. A free creative toolkit from Loudachris, Google Ads and SEO for Australian businesses.</desc>
+  <rect width="1280" height="640" fill="#122933"/>
+  <path d="M980 0v640M0 480h1280" stroke="#38515b" stroke-width="1"/>
+  <g fill="none" stroke="#E357AB" stroke-width="2">
+    <circle cx="1100" cy="248" r="110"/><circle cx="1100" cy="248" r="72"/>
+    <path d="M920 248h360M1100 68v360"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <text x="64" y="76" fill="#8C87C9" font-size="18" letter-spacing="4">A FREE CREATIVE TOOLKIT</text>
+    <text x="58" y="244" fill="#F8F3EB" font-size="136" font-weight="900" letter-spacing="-8">KINETIC</text>
+    <text x="58" y="390" fill="#E357AB" font-size="152" font-weight="900" letter-spacing="-8">FILM</text>
+    <text x="64" y="442" fill="#F8F3EB" font-size="25">Beat-timed typography. Original sound. Your next film.</text>
+    <text x="64" y="548" fill="#F8F3EB" font-size="28" font-weight="700">Loudachris Digital Marketing</text>
+    <text x="64" y="590" fill="#B8C8CD" font-size="22">Google Ads &amp; SEO for Australian businesses</text>
+    <text x="1216" y="590" fill="#8C87C9" font-size="18" text-anchor="end">loudachris.com.au</text>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+{
+  "name": "kinetic-film",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Beat-timed typography films with a local renderer and original synthesised sound.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "film": "node scripts/film.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": { "playwright": "1.58.2" },
+  "repository": { "type": "git", "url": "https://github.com/loudachris/kinetic-film.git" },
+  "homepage": "https://github.com/loudachris/kinetic-film#readme"
+}
